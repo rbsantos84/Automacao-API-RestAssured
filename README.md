@@ -28,6 +28,9 @@ __________________________________________________
 | Rest Assured   | 5.4.0  |
 | Junit   | 4.13.2  |
 
+[X]Clonar o projeto para sua maquina através de algum terminal integrado a ferramenta de desenvolvimento, ou apartada como por exemplo gitbash.
+
+git clone https://github.com/rbsantos84/Automacao-API-RestAssured.git
 
 
 
