@@ -6,7 +6,7 @@ Projeto realizado através do curso Testando API Rest com RestAssured da Udemy.
 _______________________________________________
 # Descrição:
 Nesse projeto será implementado a utilização da biblioteca RestAssured para testar e validar serviços Rest.
-Com ele, será possível fazermos requisições com todos os tipos de verbos disponíveis na especificação REST, Permite validar as respostas das requisições de maneira fácil, incluindo verificações de status de resposta, cabeçalhos, conteúdo e tempo de resposta.
+Com ele, será possível fazermos requisições com todos os tipos de verbos disponíveis na especificação REST, permite validar as respostas das requisições de maneira fácil, incluindo verificações de status de resposta, cabeçalhos, conteúdo e tempo de resposta.
 _______________________________________________
 
 # Implementações:
