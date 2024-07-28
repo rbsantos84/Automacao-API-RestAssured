@@ -1,5 +1,5 @@
 # Automacao-API-RestAssured
-Automacao API com RestAssured - Em Construção
+Automacao API com RestAssured 
 
 Esse projeto tem a finalidade de demonstrar a utilização da biblioteca RestAssured com Java.
 Projeto realizado através do curso Testando API Rest com RestAssured da Udemy.
