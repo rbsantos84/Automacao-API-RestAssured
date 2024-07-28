@@ -13,11 +13,12 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.requestSpecification;
 
-public class ContasTest extends BaseTest {
+public class SaldoTest extends BaseTest {
 
     //será executado apenas uma vez para classe inteira
+
     /**
-     * @BeforeClass
+     *  @BeforeClass
      *     public static void login(){
      *         Map<String, String> login = new HashMap<>();
      *         login.put("email", "renato@teste.com.br");
@@ -36,53 +37,27 @@ public class ContasTest extends BaseTest {
      *         //resetando o banco com dados default
      *         RestAssured.get("/reset").then().statusCode(200);
      *     }
-     *
      */
 
 
     @Test
-    public void deveIncluirContaComSucesso() {
-         given()
-             .body("{\"nome\": \"Conta inserida\" }")
-          .when()
-             .post("/contas")
-          .then()
-             .statusCode(201);
-    }
-
-    @Test
-    public void deveAlterarContaComSucesso() {
-        Integer CONTA_ID = BarrigaUtils.getIdContaPeloNome("Conta para alterar");
+    public void deveCalcularSaldoConta(){
+        Integer CONTA_ID = BarrigaUtils.getIdContaPeloNome("Conta para saldo");
         given()
-            .body("{\"nome\": \"Conta alterada\" }")
-            .pathParam("id", CONTA_ID)
         .when()
-            .put("/contas/{id}")
+            .get("/saldo")
         .then()
-         // .log().all()
             .statusCode(200)
-            .body("nome", Matchers.is("Conta alterada"));
+            .body("find{it.conta_id == "+CONTA_ID+"}.saldo", Matchers.is("534.00"));
     }
-
-    @Test
-    public void naoDeveInserirContaMesmoNome(){
-        given()
-             .body("{\"nome\": \"Conta mesmo nome\" }")
-        .when()
-             .post("/contas")
-        .then()
-                //   .log().all()
-             .statusCode(400)
-             .body("error", Matchers.is("Já existe uma conta com esse nome!"));
- }
 
     //extraindo a primeira ocorrencia do id
+
     /**
      * public Integer getIdContaPeloNome(String nome){
      *         return RestAssured.get("/contas?nome="+nome).then().extract().path("id[0]");
      *     }
      *
      */
-
 
 }
