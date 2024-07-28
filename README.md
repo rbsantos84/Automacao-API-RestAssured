@@ -12,6 +12,7 @@ _______________________________________________
 # Implementações:
 - Fazer requisições em APIs Rest através dos métodos principais HTTP(GET, POST, PUT, DELETE)<br>
 - Trabalhar com formato Json para transmitir dados entre servidor e a aplicação Web<br>
+- Formatos de comunicação(Query, Query parametrizável)
 - Realizar validações através da linguagem de consulta JsonPath<br>
 - Fazer assertivas em cima dos dados de cabeçalho da resposta<br>
 - Validar respostas através de esquemas
